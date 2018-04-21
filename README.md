@@ -25,3 +25,4 @@
 {code}
 $ chmod 775 LaunchAWSinstance.sh bootstrap.sh 
 $ ./LaunchAWSinstance.sh
+{code}
