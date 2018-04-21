@@ -20,9 +20,22 @@
 - when creating SSL Certificate you will be asked for SSL certifacte parameters to be entered
 - start and enable nginx service on port 443  
 
+
+
+# needed libraries
+
+- install required python pip to be able to use AWS CLI on your local machine
+
+```bash
+sudo apt-get install -y python python-pip
+
+pip install awscli --upgrade --user
+```
+
 # How To Run
 
 ```bash
 $ chmod 775 LaunchAWSinstance.sh bootstrap.sh 
+
 $ ./LaunchAWSinstance.sh
 ```
