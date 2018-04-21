@@ -4,6 +4,7 @@
 
 1- LaunchAWSinstance.sh
 
+- in order to launch a new instance with specific capacity and OS, an Amazon AMI id of company's should be passed as a parameter 
 - script will 1st create a security group in the required region , by default the 443 port is closed for inbound access as long as its not opened
 - script will create a keypair file to be used for SSH access
 - script will open SSH port 
@@ -37,5 +38,5 @@ pip install awscli --upgrade --user
 ```bash
 $ chmod 775 LaunchAWSinstance.sh bootstrap.sh 
 
-$ ./LaunchAWSinstance.sh
+$ ./LaunchAWSinstance.sh ami-xxxx
 ```
