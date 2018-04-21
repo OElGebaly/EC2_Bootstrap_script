@@ -15,14 +15,15 @@ aws configure
 #create security group
 echo "Creating Security Group"
 gid =`aws ec2 create-security-group --group-name levtask-sg  --description "security group for Leverton Task" | | head -2 | tail -1 | cut -d ":" -f 2`
-e
+echo "Security Group id " $gid " Created" 
 
 #Enable SSH access to the instance
-
+echo "Enable SSH access to the intance"
 aws ec2 authorize-security-group-ingress --group-name levtask-sg --protocol tcp --port 22 --cidr 0.0.0.0/0
 
 
 #create key-pair
+echo "Created Keypair"
 aws ec2 create-key-pair --key-name levtask-key --query 'KeyMaterial' --output text > levtask-key.pem
 chmod 400 levtask-key.pem
 
