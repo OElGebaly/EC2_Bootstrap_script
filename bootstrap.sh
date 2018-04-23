@@ -29,7 +29,7 @@ echo "ssl_certificate /etc/ssl/certs/nginx.crt;
 ssl_certificate_key /etc/ssl/private/nginx.key;" >> /etc/nginx/snippets/SSL_Cert.conf
 
 #configure Nginx
-sudo /etc/nginx/conf.d/hello.conf
+sudo touch /etc/nginx/conf.d/hello.conf
 sudo echo "server {
         listen 443;
         listen [::]:443;
